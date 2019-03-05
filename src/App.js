@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import './assets/css/styles.scss';
 
 import SiteHeader from './components/site-header';
 

@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import css from './styles.css';
+import css from './styles.scss';
 
 const SiteHeader = props => {
 

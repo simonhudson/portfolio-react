@@ -1,0 +1,19 @@
+@mixin wrap() {
+	@include padding-x-lg();
+	@include width-full();
+	margin: 0 auto;
+
+	@include media(tablet-p) {
+		padding: 0;
+		width: 85%;
+	}
+}
+
+@mixin wrap-narrow() {
+	@include wrap();
+
+	@include media(tablet-p) {
+		width: 45%;
+	}
+
+}

@@ -1,0 +1,9 @@
+@mixin link {
+	color: palette(primary, a);
+	text-decoration: underline;
+
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+
+}

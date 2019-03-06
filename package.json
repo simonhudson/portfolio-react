@@ -1,5 +1,5 @@
 {
-    "name": "react-bolt",
+    "name": "portfolio-react",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -75,6 +75,12 @@
         ],
         "transform": {
             "^.+\\.js$": "babel-jest"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint",
+            "pre-push": "npm run test:cover"
         }
     }
 }

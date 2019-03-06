@@ -1,3 +1,51 @@
+@import 'assets/css/styles';
+
 .site-header {
-	background: red;
+	@include transition();
+	@include width-full();
+	background: palette(primary, bodyText);
+	border-bottom: 5px solid palette(primary, a);
+
+	.has-js & {
+		position: fixed;
+		z-index:index($z-index, 'siteHeader');
+	}
+
+	.is-scrolled & {
+		box-shadow: 0 0 5px palette(primary, bodyText);
+	}
+
+	&__wrap {
+		@include padding-xsm();
+		@include transition();
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__strap {
+		@include strong();
+		@include uppercase();
+		color: palette(primary, a);
+		letter-spacing: 1px;
+		margin-bottom: 0;
+		margin-left: rem($base-font-size);
+
+		span {
+			@include visuallyhidden();
+			color: rgba(palette(primary, white), .6);
+
+			@include media(tab-p) {
+				@include visuallyshown();
+			}
+
+		}
+
+		em {
+			@include flourish();
+			text-transform: lowercase;
+		}
+
+	}
+
 }

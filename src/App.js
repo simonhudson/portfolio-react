@@ -3,7 +3,8 @@
 import React, { Component } from 'react';
 import './assets/css/styles.scss';
 
-import SiteHeader from './components/site-header';
+import Portfolio from '~/components/portfolio';
+import SiteHeader from '~/components/site-header';
 
 class App extends Component {
 
@@ -19,6 +20,7 @@ class App extends Component {
         return (
             <>
                 <SiteHeader />
+                <Portfolio />
             </>
         );
     }

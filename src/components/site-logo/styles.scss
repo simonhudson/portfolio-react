@@ -1,0 +1,12 @@
+@import 'assets/css/styles';
+
+.site-logo {
+	
+	@include transition();
+	height: 40px;
+
+	@include media(tab-p) {
+		height: auto;
+	}
+
+}

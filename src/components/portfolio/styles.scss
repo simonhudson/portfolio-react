@@ -1,0 +1,99 @@
+@import 'assets/css/styles';
+
+.portfolio {
+	display: flex;
+	flex-wrap:wrap;
+}
+
+.item {
+	@include padding-b();
+
+	@include media(tab-p) {
+		@include width-half();
+	}
+
+	@include media(tab-l) {
+		@include width-third();
+	}
+
+	&__info {
+		@include margin-b-xs();
+		@include padding-b-xs();
+		border-bottom: 1px solid rgba(palette(primary, bodyText), .10);
+	}
+
+	&__img {
+
+		@include media(tab-p) {
+			@include padding-x-sm();
+		}
+
+		img {
+			@include margin-b-xs();
+			@include width-full();
+			height:auto;
+			opacity: 0.5;
+		}
+
+	}
+
+	&__title {
+		@include h5();
+		@include strong();
+		@include uppercase();
+		margin: 0;
+	}
+
+	&__title-link {
+		@include strong();
+	}
+
+	&__content {
+		@include padding-x-xs();
+
+		@include media(tab-p) {
+			@include padding-x-sm();
+		}
+
+	}
+
+	&__made-with {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			@include small();
+			color: lighten(palette(primary, bodyText), 35%);
+			display: inline;
+
+			&:after {
+				content: ',';
+			}
+
+			&:last-of-type:after {
+				content: '';
+			}
+
+		}
+
+	}
+
+	&__links {
+		@include padding-t-xs();
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			@include margin-r-sm();
+			display: inline-block;
+			width: 50%;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+	}
+
+}

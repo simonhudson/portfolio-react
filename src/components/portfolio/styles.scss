@@ -2,98 +2,102 @@
 
 .portfolio {
 	display: flex;
-	flex-wrap:wrap;
+	flex-wrap: wrap;
 }
 
 .item {
 	@include padding-b();
 
-	@include media(tab-p) {
+	@include media(tablet-p) {
 		@include width-half();
 	}
 
-	@include media(tab-l) {
+	@include media(tablet-l) {
 		@include width-third();
 	}
+	
+}
 
-	&__info {
-		@include margin-b-xs();
-		@include padding-b-xs();
-		border-bottom: 1px solid rgba(palette(primary, bodyText), .10);
+.item__img {
+
+	@include media(tablet-p) {
+		@include padding-x-sm();
 	}
 
-	&__img {
+	img {
+		@include margin-b-xsm();
+		@include width-full();
+		height:auto;
+		opacity: 0.5;
+	}
 
-		@include media(tab-p) {
-			@include padding-x-sm();
+}
+
+.item__title {
+	@include h5();
+	@include padding-b();
+	@include strong();
+	@include uppercase();
+	margin: 0;
+	
+	&:before {
+		@include margin-b();
+		@include padding-t();
+		content: '';
+		display: block;
+		border-bottom: 1px solid palette(primary, b);
+		width: 10%;
+	}
+	
+}
+
+.item__title-link {
+	color: palette(primary, bodyText);
+	@include strong();
+	text-decoration: none;
+}
+
+.item__content {
+	@include padding-x-xsm();
+
+	@include media(tablet-p) {
+		@include padding-x-sm();
+	}
+
+}
+
+.item__made-with {
+	@include no-margin();
+	@include padding-b();
+	list-style: none;
+	
+	li {
+		// @include ;
+		color: lighten(palette(primary, bodyText), 10%);
+		display: inline;
+
+		&:not(:last-of-type):after {
+			content: ', ';
 		}
 
-		img {
-			@include margin-b-xs();
-			@include width-full();
-			height:auto;
-			opacity: 0.5;
+	}
+
+}
+
+.item__links {
+	@include padding-t-xsm();
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		@include margin-r-sm();
+		display: inline-block;
+		width: 50%;
+
+		&:last-of-type {
+			margin-right: 0;
 		}
-
-	}
-
-	&__title {
-		@include h5();
-		@include strong();
-		@include uppercase();
-		margin: 0;
-	}
-
-	&__title-link {
-		@include strong();
-	}
-
-	&__content {
-		@include padding-x-xs();
-
-		@include media(tab-p) {
-			@include padding-x-sm();
-		}
-
-	}
-
-	&__made-with {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-
-		li {
-			@include small();
-			color: lighten(palette(primary, bodyText), 35%);
-			display: inline;
-
-			&:after {
-				content: ',';
-			}
-
-			&:last-of-type:after {
-				content: '';
-			}
-
-		}
-
-	}
-
-	&__links {
-		@include padding-t-xs();
-		display: flex;
-		justify-content: space-between;
-
-		a {
-			@include margin-r-sm();
-			display: inline-block;
-			width: 50%;
-
-			&:last-of-type {
-				margin-right: 0;
-			}
-		}
-
+		
 	}
 
 }

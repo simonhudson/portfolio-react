@@ -1,7 +1,7 @@
 @mixin headings() {
+	@include sans-serif();
+	@include strong();
 	color: palette(primary, bodyText);
-	font-family: $base-font-serif;
-	// font-weight: regular;
 	line-height: 1.4em;
 	margin-bottom: 1rem;
 }

@@ -7,13 +7,11 @@
 }
 
 @mixin strong() {
-	font-family: $base-font-bold;
-	font-weight: normal;
+	font-weight: 600;
 }
 
 @mixin semi-strong() {
-	font-family: $base-font-semi-bold;
-	font-weight: normal;
+	font-weight: 300;
 }
 
 @mixin center-text() {
@@ -34,7 +32,11 @@
 	text-transform: uppercase;
 }
 
-@mixin small() {
+@mixin lowercase() {
+	text-transform: lowercase;
+}
+
+@mixin text-small() {
 	font-size: rem($base-font-size * 0.85);
 }
 

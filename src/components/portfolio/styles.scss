@@ -33,22 +33,24 @@
 
 }
 
-.item__title {
-	@include h5();
-	@include padding-b();
-	@include strong();
-	@include uppercase();
-	margin: 0;
+.item__info {
 	
-	&:before {
+	&:after {
 		@include margin-b();
-		@include padding-t();
 		content: '';
 		display: block;
 		border-bottom: 1px solid palette(primary, b);
 		width: 10%;
 	}
 	
+}
+
+.item__title {
+	@include h5();
+	@include no-margin();
+	@include padding-b();
+	@include strong();
+	@include uppercase();
 }
 
 .item__title-link {

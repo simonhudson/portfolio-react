@@ -43,11 +43,14 @@ class Item extends Component {
         const {
             github,
             madeWith,
+            omit,
             slug,
             text,
             title,
             url
         } = props;
+        
+        if (omit) return null;
         
         return (
 				<div className="item">

@@ -1,0 +1,6 @@
+@import 'assets/css/styles';
+
+.site-footer {
+	@include padding-y();
+	background: lighten(palette(primary, black), 95%);
+}

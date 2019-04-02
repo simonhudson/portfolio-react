@@ -4,9 +4,7 @@
 	@include transition();
 	@include width-full();
 	background: palette(primary, white);
-	// border-top: 5px solid palette(primary, b);
-	position: -webkit-sticky;
-	position: -moz-sticky;
+	border-top: 2px solid palette(primary, b);
 	position: sticky;
 	top: 0;
 
@@ -28,12 +26,12 @@
 		
 		@include media(tablet-p) {
 		    @include padding-y-lg();
+			justify-content: left;
 		}
 		
 	}
 
 	&__strap {
-		@include center-text();
 		@include uppercase();
 		margin-bottom: 0;
 

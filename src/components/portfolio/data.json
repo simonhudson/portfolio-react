@@ -134,7 +134,8 @@
             "CSS",
             ".NET",
             "Sharepoint"
-        ]
+        ],
+        "omit": true
     },
     {
         "slug": "marshalls-tree-surgeons",

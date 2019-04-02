@@ -5,6 +5,7 @@ import './assets/css/styles.scss';
 
 import Portfolio from '~/components/portfolio';
 import SiteHeader from '~/components/site-header';
+import SiteFooter from '~/components/site-footer';
 
 class App extends Component {
 
@@ -21,6 +22,7 @@ class App extends Component {
             <>
                 <SiteHeader />
                 <Portfolio />
+                <SiteFooter />
             </>
         );
     }

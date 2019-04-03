@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import SiteLogo from '~/components/site-logo';
-import css from './styles.scss';
+import css from './css/styles.scss';
 
 class SiteHeader extends Component {
 	

@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Item from './item';
-import data from './data.json';
-import css from './styles.scss';
+import data from './data/portfolio.json';
+import css from './css/styles.scss';
 
 const Portfolio = props => {
 	

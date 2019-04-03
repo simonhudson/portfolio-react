@@ -1,8 +1,8 @@
 'use strict';
 
 import React from 'react';
-import logo from './logo.svg';
-import css from './styles.scss';
+import logo from './imgs/logo.svg';
+import css from './css/styles.scss';
 
 const SiteLogo = props => {
 	

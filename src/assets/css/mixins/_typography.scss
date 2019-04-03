@@ -14,8 +14,12 @@
 	font-weight: 300;
 }
 
-@mixin center-text() {
+@mixin text-center() {
 	text-align: center;
+}
+
+@mixin text-left() {
+	text-align: left;
 }
 
 @mixin flourish() {

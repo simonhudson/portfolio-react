@@ -1,8 +1,10 @@
-@mixin link {
-	color: palette(primary, a);
-	text-decoration: underline;
+@mixin text-link {
+	@include strong();
+	color: palette(primary, b);
+	text-decoration: none;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		text-decoration: none;
 	}
 

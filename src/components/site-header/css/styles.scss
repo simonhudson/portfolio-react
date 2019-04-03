@@ -32,14 +32,24 @@
 	}
 
 	&__strap {
+		@include no-margin();
+		@include text-center();
 		@include uppercase();
-		margin-bottom: 0;
 
+		@include media(tablet-p) {
+		    @include text-left();
+		}
+		
 		span {
 			@include strong();
 			color: palette(primary, b);
+			display: block;
+			
+			@include media(tablet-p) {
+			    display: inline;
+			}
+			
 		}
-
 
 	}
 

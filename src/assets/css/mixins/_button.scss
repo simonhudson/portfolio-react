@@ -1,0 +1,12 @@
+@mixin button() {
+	@include padding();
+	@include strong();
+	@include text-center();
+	text-decoration: none;
+}
+
+@mixin button--primary() {
+	@include button();
+	background: palette(primary, b);
+	color: palette(primary, white);
+}

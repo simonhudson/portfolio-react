@@ -56,17 +56,11 @@ class Item extends Component {
 				<div className="item">
 					<div className="wrap item__wrap">
 						<div className="item__img">
-							<a href={props.url} rel="noopener noreferrer" target="_blank">
-								<img alt="View project (opens in a new tab/window)" src="http://placehold.it/350x150" />
-							</a>
+							<img alt="View project (opens in a new tab/window)" src="http://placehold.it/350x150" />
 						</div>
 						<div className="item__content">
 							<div className="item__info">
-								<h2 className="item__title">
-									<a className="item__title-link" href={props.url} rel="noopener noreferrer" target="_blank">
-										{props.title}
-									</a>
-								</h2>
+								<h2 className="item__title">{props.title}</h2>
                                 {this.renderMadeWith()}    
 							</div>
 							<div className="item__text" dangerouslySetInnerHTML={{ __html: this.generateCopyMarkup() }}>

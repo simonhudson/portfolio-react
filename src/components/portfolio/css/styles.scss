@@ -44,15 +44,11 @@
 .item__title {
 	@include h5();
 	@include no-margin();
-	@include padding-b();
+	@include padding-b-sm();
 	@include strong();
 	@include uppercase();
-}
-
-.item__title-link {
-	@include strong();
 	color: palette(primary, black);
-	text-decoration: none;
+	font-size: rem($base-font-size);
 }
 
 .item__content {
@@ -67,11 +63,16 @@
 	list-style: none;
 	
 	li {
-		color: lighten(palette(primary, bodyText), 10%);
-		display: inline;
+		@include margin-b-xsm();
+		display: inline-block;
 
-		&:not(:last-of-type):after {
-			content: ', ';
+		&:not(:last-of-type) {
+			@include margin-r-xsm();
+			
+			&:after {
+				content: ',';
+			}
+			
 		}
 
 	}

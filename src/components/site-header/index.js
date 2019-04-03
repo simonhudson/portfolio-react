@@ -31,7 +31,7 @@ class SiteHeader extends Component {
 				<div className="wrap site-header__wrap">
 					<SiteLogo context="header" />
 					<p className="site-header__strap">
-						Web Design &amp; Development by&nbsp;
+						<span>Web Design &amp; Development by&nbsp;</span>
 						<span>Simon Hudson</span>
 					</p>
 				</div>

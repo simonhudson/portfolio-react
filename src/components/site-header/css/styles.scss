@@ -4,7 +4,7 @@
 	@include transition();
 	@include width-full();
 	background: palette(primary, white);
-	border-top: 2px solid palette(primary, b);
+	border-top: 6px solid palette(primary, b);
 	position: sticky;
 	top: 0;
 
@@ -17,15 +17,17 @@
 	}
 
 	&__wrap {
-		@include padding-y();
+		@include padding-y-sm();
 		@include transition();
 		align-items: center;
 		display: flex;
+		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: center;
 		
 		@include media(tablet-p) {
 		    @include padding-y-lg();
+			flex-direction: row;
 			justify-content: left;
 		}
 		
@@ -40,7 +42,7 @@
 		    @include text-left();
 		}
 		
-		span {
+		span:nth-of-type(2) {
 			@include strong();
 			color: palette(primary, b);
 			display: block;

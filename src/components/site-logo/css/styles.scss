@@ -1,7 +1,8 @@
 @import 'assets/css/styles';
 
 .site-logo {
-	
+	@include margin-r-sm();
+	@include margin-b-sm();
 	@include transition();
 	height: 40px;
 
@@ -9,4 +10,18 @@
 		height: auto;
 	}
 
+}
+
+.site-logo--header {
+	@include transition();
+
+	@include media(phone-p, 'max') {
+		
+		.is-scrolled & {
+			@include no-margin();
+			height: 0;
+		}
+	   
+	}
+	
 }

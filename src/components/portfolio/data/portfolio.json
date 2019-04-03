@@ -1,7 +1,7 @@
 [
     {
-        "slug": "experian-creditmatcher",
-        "title": "Experian CreditMatcher",
+        "slug": "experian-marketplace",
+        "title": "Experian Marketplace",
         "text": [
         
         ],
@@ -21,7 +21,7 @@
     },
     {
         "slug": "experian-credit-expert",
-        "title": "Experian Credit Expert",
+        "title": "Experian CreditExpert",
         "text": [
             
         ],

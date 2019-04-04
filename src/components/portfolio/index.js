@@ -2,14 +2,14 @@
 
 import React from 'react';
 import Item from './item';
-import data from './data/portfolio.json';
+import content from '~/content/portfolio.json';
 import css from './css/styles.scss';
 
 const Portfolio = props => {
 	
 	return (
 		<main className="portfolio">
-			{data.map((item, index) => <Item key={`item--${index}`}	{...item} />)}
+			{content.map((item, index) => <Item key={`item--${index}`}	{...item} />)}
 		</main>
 	);
 

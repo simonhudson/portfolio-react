@@ -1,6 +1,30 @@
 @import 'assets/css/styles';
 
 .site-footer {
-	@include padding-y();
+	@include padding-y-lg();
 	background: #f5f5f5;
+}
+
+.site-footer__wrap {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.site-footer__img {
+	@include box-shadow();
+	@include circle();
+	@include margin-b();
+	border: 3px solid #fff;
+	height: auto;
+	width: 35%;
+}
+
+.site-footer__heading {
+	@include h4();
+}
+
+.site-footer__links {
+	@include button-row();
+	@include padding-b-lg();
 }

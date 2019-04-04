@@ -30,7 +30,7 @@ class Item extends Component {
     renderGitHub = () => {
         if (!this.props.github) return null;
         return (
-            <a className="btn btn--secondary item__link item__link--project" href={`http://www.github.com/simonhudson/${this.props.github}`} rel="noopener noreferrer" target="_blank">
+            <a className="btn--primary item__link" href={`http://www.github.com/simonhudson/${this.props.github}`} rel="noopener noreferrer" target="_blank">
                 View <span className="visuallyhidden">{this.props.title}</span> on Github
             </a>
         );
@@ -66,7 +66,7 @@ class Item extends Component {
 							<div className="item__text" dangerouslySetInnerHTML={{ __html: this.generateCopyMarkup() }}>
 							</div>
 							<div className="item__links">
-								<a className="btn btn--secondary item__link item__link--project" href={props.url} rel="noopener noreferrer" target="_blank">
+								<a className="btn--primary item__link" href={props.url} rel="noopener noreferrer" target="_blank">
 									View <span className="visuallyhidden">{props.title}</span>project
 								</a>
                                 {this.renderGitHub()}

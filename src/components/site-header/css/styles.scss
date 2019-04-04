@@ -29,6 +29,11 @@
 		    @include padding-y-lg();
 			flex-direction: row;
 			justify-content: left;
+			
+			.is-scrolled & {
+				@include padding-y-xsm();
+			}
+			
 		}
 		
 	}

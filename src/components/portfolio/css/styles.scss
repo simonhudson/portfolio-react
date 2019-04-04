@@ -64,6 +64,7 @@
 	
 	li {
 		@include margin-b-xsm();
+		@include text-small();
 		display: inline-block;
 
 		&:not(:last-of-type) {
@@ -89,9 +90,7 @@
 }
 
 .item__link {
-	@include button--primary();
 	@include margin-r();
-	display: inline-block;
 	
 	@include media(tablet-p) {
 

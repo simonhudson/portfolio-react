@@ -1,18 +1,18 @@
 @import 'assets/css/styles';
 
 .site-logo {
-	@include margin-r-sm();
-	@include margin-b-sm();
 	@include transition();
 	height: 40px;
 
-	@include media(tab-p) {
-		height: auto;
+	@include media(tablet-p) {
+		height: 60px;
 	}
 
 }
 
 .site-logo--header {
+	@include margin-r-sm();
+	@include margin-b-sm();
 	@include transition();
 
 	@include media(phone-p, 'max') {
@@ -22,6 +22,14 @@
 			height: 0;
 		}
 	   
+	}
+	
+	@include media(tablet-p) {
+	    
+		.is-scrolled & {
+			height: 40px;
+		}
+		
 	}
 	
 }

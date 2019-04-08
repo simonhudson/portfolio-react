@@ -17,7 +17,7 @@
 	}
 
 	&__wrap {
-		@include padding-y-sm();
+		// @include padding-y-sm();
 		@include transition();
 		align-items: center;
 		display: flex;
@@ -31,7 +31,7 @@
 			justify-content: left;
 			
 			.is-scrolled & {
-				@include padding-y-xsm();
+				@include padding-y-sm();
 			}
 			
 		}

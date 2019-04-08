@@ -30,7 +30,7 @@ class Item extends Component {
     renderGitHub = () => {
         if (!this.props.github) return null;
         return (
-            <a className="btn--primary item__link" href={`http://www.github.com/simonhudson/${this.props.github}`} rel="noopener noreferrer" target="_blank">
+            <a className="btn--primary--hollow item__link" href={`http://www.github.com/simonhudson/${this.props.github}`} rel="noopener noreferrer" target="_blank">
                 View <span className="visuallyhidden">{this.props.title}</span> on Github
             </a>
         );

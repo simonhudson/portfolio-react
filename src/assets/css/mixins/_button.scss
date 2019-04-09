@@ -24,8 +24,13 @@
 	display: flex;
 	justify-content: space-between;
 	
-	[class^=btn--]:not(:last-of-type) {
-		@include margin-r();
+	[class^=btn--] {
+		flex: 1 1 0;
+		
+		&:not(:last-of-type) {
+			@include margin-r();
+		}
+
 	}
 	
 }

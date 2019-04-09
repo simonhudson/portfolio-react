@@ -22,9 +22,16 @@
 
 .site-footer__heading {
 	@include h4();
+	@include serif();
+	font-weight: 300;
 }
 
 .site-footer__links {
 	@include button-row();
 	@include padding-b-lg();
+	@include width-full();
+	
+	@include media(tablet-l) {
+	    width: auto;
+	}
 }

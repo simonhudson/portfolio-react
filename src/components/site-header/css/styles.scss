@@ -7,62 +7,55 @@
 	border-top: 6px solid palette(primary, b);
 	position: sticky;
 	top: 0;
+}
 
-	.has-js & {
-		z-index:index($z-index, 'site-header');
+.has-js .site-header {
+	z-index:index($z-index, 'site-header');
+}
+
+.is-scrolled .site-header {
+	box-shadow: 0 0 5px palette(primary, bodyText);
+}
+
+.site-header__wrap {
+	@include padding-y();
+	@include transition();
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+	@include media(tablet-p) {
+	    @include padding-y-lg();
+		flex-direction: row;
+		justify-content: left;
 	}
+	
+}
 
-	.is-scrolled & {
-		box-shadow: 0 0 5px palette(primary, bodyText);
+.site-header__strap {
+	@include no-margin();
+	@include text-center();
+	@include uppercase();
+	color: rgba(palette(primary, bodyText), .65);
+	letter-spacing: rem($base-font-size * 0.05);
+	line-height: rem($base-font-size * 1.4);
+	
+	@include media(tablet-p) {
+	    @include text-left();
 	}
-
-	&__wrap {
-		@include padding-y();
-		@include transition();
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: center;
+	
+	span:nth-of-type(2) {
+		@include strong();
+		color: palette(primary, bodyText);
+		display: block;
+		font-size: rem($base-font-size);
 		
 		@include media(tablet-p) {
-		    @include padding-y-lg();
-			flex-direction: row;
-			justify-content: left;
-			
-			.is-scrolled & {
-				@include padding-y-sm();
-			}
-			
+		    display: inline;
 		}
 		
-	}
-
-	&__strap {
-		@include no-margin();
-		@include text-center();
-		@include uppercase();
-		color: rgba(palette(primary, bodyText), .65);
-		font-size: rem($base-font-size * 0.75);
-		letter-spacing: rem($base-font-size * 0.15);
-		line-height: rem($base-font-size * 1.4);
-		
-		@include media(tablet-p) {
-		    @include text-left();
-		}
-		
-		span:nth-of-type(2) {
-			@include strong();
-			color: palette(primary, bodyText);
-			display: block;
-			font-size: rem($base-font-size);
-			
-			@include media(tablet-p) {
-			    display: inline;
-			}
-			
-		}
-
 	}
 
 }

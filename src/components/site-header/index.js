@@ -39,6 +39,6 @@ class SiteHeader extends Component {
 		);
 	}
 
-};
+}
 
 export default SiteHeader;

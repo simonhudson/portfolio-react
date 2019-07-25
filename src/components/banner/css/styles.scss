@@ -39,8 +39,6 @@
 
 .banner__title {
 	@include h5();
-	@include semi-strong();
-	@include serif();
 	
 	@include media(tablet-p) {
 	    @include h2();

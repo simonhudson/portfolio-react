@@ -44,6 +44,7 @@
 .item__title {
 	@include no-margin();
 	@include padding-b-sm();
+	@include sans-serif();
 	@include strong();
 	@include uppercase();
 	color: palette(primary, black);

@@ -10,10 +10,6 @@
 	@include width-full();
 
 	@include media(tablet-p) {
-		@include width-half();
-	}
-
-	@include media(tablet-l) {
 		@include width-third();
 	}
 	
@@ -48,8 +44,12 @@
 
 .item--secondary {
 	
-	@include media(tablet-l) {
+	@include media(tablet-p) {
 		@include width-half();
+	}
+	
+	@include media(tablet-l) {
+		@include width-third();
 	}
 	
 }

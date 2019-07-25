@@ -1,10 +1,10 @@
 @import 'assets/css/styles';
 
 .banner__outer {
+	@include gradient('primary, b');
 	@include margin-b();
 	@include padding-y();
 	@include width-full();
-	background: #eee;
 	
 	@include media(tablet-p) {
 	    @include padding-y-lg();
@@ -17,6 +17,7 @@
 }
 
 .banner {
+	@include text-center();
 	display: flex;
 	flex-direction: column;
 	
@@ -54,14 +55,18 @@
 .banner__title {
 	@include h5();
 	@include no-margin();
+	@include text-shadow();
+	color: palette(primary, white);
 	
 	@include media(tablet-p) {
-		opacity: 0.75;
-	    @include h3();
+		@include h3();
+		color: palette(primary, white);
+		opacity: 0.9;
 	}
 	
 	@include media(tablet-l) {
 	    @include h2();
+		color: palette(primary, white);
 	}
 	
 }

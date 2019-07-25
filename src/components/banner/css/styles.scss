@@ -1,10 +1,10 @@
 @import 'assets/css/styles';
 
 .banner__outer {
-	@include gradient('primary, b');
 	@include margin-b();
 	@include padding-y();
 	@include width-full();
+	background: #f9f9f9;
 	
 	@include media(tablet-p) {
 	    @include padding-y-lg();
@@ -17,7 +17,6 @@
 }
 
 .banner {
-	@include text-center();
 	display: flex;
 	flex-direction: column;
 	
@@ -35,8 +34,11 @@
 }
 
 .banner__primary {	
+	background: url('../../../assets/imgs/double-quotations.svg') 0 0 no-repeat;
+	background-size: 100px auto;
 	
 	@include media(tablet-p) {
+		@include padding();
 		width: calc(100% / 3 * 2);
 	}
 
@@ -55,18 +57,14 @@
 .banner__title {
 	@include h5();
 	@include no-margin();
-	@include text-shadow();
-	color: palette(primary, white);
+	opacity: 0.75;
 	
 	@include media(tablet-p) {
 		@include h3();
-		color: palette(primary, white);
-		opacity: 0.9;
 	}
 	
 	@include media(tablet-l) {
 	    @include h2();
-		color: palette(primary, white);
 	}
 	
 }

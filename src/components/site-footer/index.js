@@ -11,9 +11,11 @@ const getNowDate = () => {
 const SiteFooter = props => {
 
 	return (
-		<footer className="site-footer">
-			<p className="site-footer__copyright">&copy; Simon Hudson {getNowDate().getFullYear()}</p>
-		</footer>
+		<div className="wrap">
+			<footer className="site-footer">
+				<p className="site-footer__copyright">&copy; Simon Hudson {getNowDate().getFullYear()}</p>
+			</footer>
+		</div>
 	);
 
 };

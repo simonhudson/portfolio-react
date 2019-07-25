@@ -7,6 +7,7 @@
 
 .item {
 	@include padding-b();
+	@include width-full();
 
 	@include media(tablet-p) {
 		@include width-half();
@@ -14,6 +15,41 @@
 
 	@include media(tablet-l) {
 		@include width-third();
+	}
+	
+}
+
+.item--primary {
+	
+	@include media(tablet-p) {
+		@include width-full();
+		display: flex;
+		
+		& div {
+			flex-basis: 0;
+			flex-grow: 1;
+		}
+		
+		.item__img {
+			@include padding-r-xlg();
+		}
+		
+		.item__content {
+			@include no-padding();
+		}
+		
+	}
+
+	@include media(tablet-l) {
+		@include width-full();
+	}
+
+}
+
+.item--secondary {
+	
+	@include media(tablet-l) {
+		@include width-half();
 	}
 	
 }

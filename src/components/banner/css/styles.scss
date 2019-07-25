@@ -1,10 +1,18 @@
 @import 'assets/css/styles';
 
-.banner {
-	@include border-b();
+.banner__outer {
 	@include margin-b();
 	@include padding-y();
 	@include width-full();
+	
+	@include media(tablet-l) {
+	    @include padding-y-xlg();
+		background: #eee;
+	}
+	
+}
+
+.banner {
 	display: flex;
 	flex-direction: column;
 	
@@ -20,9 +28,24 @@
 }
 
 .banner__primary {
+	position: relative;
+	
+	&,
+	&:before {
+		background: url('../../../assets/imgs/quotations.svg') bottom right no-repeat;
+		background-size: 100px auto;
+	}
+	
+	&:before {
+		@include position-tl();
+		content: '';
+		height: 100px;
+		width: 100px;
+		transform: rotate(180deg);
+	}
 	
 	@include media(tablet-l) {
-		@include padding-r();
+		@include padding();
 		width: calc(100% / 3 * 2);
 	}
 
@@ -32,6 +55,7 @@
 
 	@include media(tablet-l) {
 		@include padding-l();
+		text-align: right;
 		width: calc(100% / 3 * 1);
 	}
 		
@@ -40,7 +64,8 @@
 .banner__title {
 	@include h5();
 	
-	@include media(tablet-p) {
+	@include media(tablet-l) {
+		opacity: 0.75;
 	    @include h2();
 	}
 	

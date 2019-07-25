@@ -6,6 +6,17 @@
 	@include padding-y();
 	@include width-full();
 	display: flex;
+	flex-direction: column;
+	
+	@include media(tablet-l) {
+		flex-direction: row;
+	}
+	
+}
+
+.banner__primary,
+.banner__secondary {
+	@include width-full();
 }
 
 .banner__primary {
@@ -18,7 +29,7 @@
 }
 
 .banner__secondary {
-	
+
 	@include media(tablet-l) {
 		@include padding-l();
 		width: calc(100% / 3 * 1);
@@ -27,9 +38,14 @@
 }
 
 .banner__title {
-	@include h2();
+	@include h5();
 	@include semi-strong();
 	@include serif();
+	
+	@include media(tablet-p) {
+	    @include h2();
+	}
+	
 }
 
 .banner__img {

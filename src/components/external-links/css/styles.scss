@@ -1,0 +1,23 @@
+@import 'assets/css/styles';
+
+.external-links {
+	display: flex;
+}
+
+.external-links__item {
+	@include transition();
+	font-size: rem($base-font-size * 2.4);
+	filter: grayscale(1);
+	opacity: 0.5;
+	
+	&:focus,
+	&:hover {
+		filter: grayscale(0);
+		opacity: 1;
+	}
+	
+}
+
+.external-links__item:not(:last-of-type) {
+	@include margin-r();
+}

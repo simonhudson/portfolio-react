@@ -1,9 +1,13 @@
+body {
+	border-top: 6px solid palette(primary, b);
+}
+
 main {
 	@include padding-y-lg();
 }
 
 .wrap {
-	@include wrap();	
+	@include wrap();
 }
 
 .wrap--narrow {

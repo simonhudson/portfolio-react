@@ -1,0 +1,40 @@
+@import 'assets/css/styles';
+
+.banner {
+	@include border-b();
+	@include margin-b();
+	@include padding-y();
+	@include width-full();
+	display: flex;
+}
+
+.banner__primary {
+	
+	@include media(tablet-l) {
+		@include padding-r();
+		width: calc(100% / 3 * 2);
+	}
+
+}
+
+.banner__secondary {
+	
+	@include media(tablet-l) {
+		@include padding-l();
+		width: calc(100% / 3 * 1);
+	}
+		
+}
+
+.banner__title {
+	@include h2();
+	@include semi-strong();
+	@include serif();
+}
+
+.banner__img {
+	@include box-shadow();
+	@include circle();
+	@include margin-b();
+	border: 3px solid #fff;
+}

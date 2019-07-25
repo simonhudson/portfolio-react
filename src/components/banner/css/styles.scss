@@ -33,12 +33,14 @@
 	@include width-full();
 }
 
-.banner__primary {	
+.banner__primary {
+	@include text-center();
 	background: url('../../../assets/imgs/double-quotations.svg') 0 0 no-repeat;
 	background-size: 100px auto;
 	
 	@include media(tablet-p) {
 		@include padding();
+		@include text-left();
 		width: calc(100% / 3 * 2);
 	}
 

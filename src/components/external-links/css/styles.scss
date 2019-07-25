@@ -6,7 +6,7 @@
 
 .external-links__item {
 	@include transition();
-	font-size: rem($base-font-size * 2.4);
+	font-size: rem($base-font-size * 2);
 	filter: grayscale(1);
 	opacity: 0.5;
 	

@@ -3,7 +3,11 @@ body {
 }
 
 main {
-	@include padding-y-lg();
+	
+	@include media(tablet-p) {
+		@include padding-y-lg();
+	}
+	
 }
 
 .wrap {

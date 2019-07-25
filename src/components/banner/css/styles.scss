@@ -4,10 +4,14 @@
 	@include margin-b();
 	@include padding-y();
 	@include width-full();
+	background: #eee;
+	
+	@include media(tablet-p) {
+	    @include padding-y-lg();
+	}
 	
 	@include media(tablet-l) {
 	    @include padding-y-xlg();
-		background: #eee;
 	}
 	
 }
@@ -16,8 +20,10 @@
 	display: flex;
 	flex-direction: column;
 	
-	@include media(tablet-l) {
+	@include media(tablet-p) {
+		align-items: center;
 		flex-direction: row;
+		justify-content: space-between;
 	}
 	
 }
@@ -29,7 +35,7 @@
 
 .banner__primary {	
 	
-	@include media(tablet-l) {
+	@include media(tablet-p) {
 		width: calc(100% / 3 * 2);
 	}
 
@@ -37,19 +43,24 @@
 
 .banner__secondary {
 
-	@include media(tablet-l) {
+	@include media(tablet-p) {
 		@include padding-l();
 		text-align: right;
-		width: calc(100% / 3 * 1);
+		width: calc(100% / 4 * 1);
 	}
 		
 }
 
 .banner__title {
 	@include h5();
+	@include no-margin();
+	
+	@include media(tablet-p) {
+		opacity: 0.75;
+	    @include h3();
+	}
 	
 	@include media(tablet-l) {
-		opacity: 0.75;
 	    @include h2();
 	}
 	
@@ -58,6 +69,13 @@
 .banner__img {
 	@include box-shadow();
 	@include circle();
-	@include margin-b();
+	@include visuallyhidden();
 	border: 3px solid #fff;
+
+	@include media(tablet-p) {
+	    @include visuallyshown();
+		height: 240px;
+		width: auto;
+	}
+
 }

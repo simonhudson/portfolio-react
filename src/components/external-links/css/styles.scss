@@ -46,6 +46,7 @@
 
 .external-links__link-text {
 	@include margin-l();
+	@include strong();
 	@include visually-hidden();
 	font-size: rem($base-font-size);
 	vertical-align: middle;

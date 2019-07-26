@@ -10,11 +10,13 @@ const LinkItem = props => {
 	if (props.isDisabled) return null;
 	
 	return (
-		<a className="external-links__item" href={props.href} rel="noopener noreferrer" target="_blank">
-			<Icon type={props.icon} />
-			<span className="visuallyhidden">{props.CTAText}</span>
-			<NewTabWarning />
-		</a>
+		<li className="external-links__item">
+			<a className="external-links__link" href={props.href} rel="noopener noreferrer" target="_blank">
+				<Icon type={props.icon} />
+				<span className="external-links__link-text">{props.CTAText}</span>
+				<NewTabWarning />
+			</a>
+		</li>
 	);
 
 };

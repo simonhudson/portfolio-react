@@ -1,29 +1,14 @@
 @import 'assets/css/styles';
 
-.banner__outer {
-	@include margin-b();
-	@include padding-y();
-	@include width-full();
-	background: #f9f9f9;
-	
-	@include media(tablet-p) {
-	    @include padding-y-lg();
-	}
-	
-	@include media(tablet-l) {
-	    @include padding-y-xlg();
-	}
-	
-}
-
 .banner {
+	@include border-b();
+	@include padding-y();
 	display: flex;
 	flex-direction: column;
 	
 	@include media(tablet-p) {
-		align-items: center;
+		@include padding-y-lg();
 		flex-direction: row;
-		justify-content: space-between;
 	}
 	
 }
@@ -50,7 +35,6 @@
 
 	@include media(tablet-p) {
 		@include padding-l();
-		text-align: right;
 		width: calc(100% / 4 * 1);
 	}
 		
@@ -74,11 +58,11 @@
 .banner__img {
 	@include box-shadow();
 	@include circle();
-	@include visuallyhidden();
+	@include visually-hidden();
 	border: 3px solid #fff;
 
 	@include media(tablet-p) {
-	    @include visuallyshown();
+	    @include visually-shown();
 		height: 240px;
 		width: auto;
 	}

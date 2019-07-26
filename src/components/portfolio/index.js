@@ -8,11 +8,9 @@ import css from './css/styles.scss';
 const Portfolio = props => {
 	
 	return (
-		<div className="wrap">
-			<main className="portfolio">
-				{data.map((item, index) => <Item key={`item--${index}`}	{...item} index={index} />)}
-			</main>
-		</div>
+		<main className="portfolio">
+			{data.map((item, index) => <Item key={`item--${index}`}	{...item} index={index} />)}
+		</main>
 	);
 
 };

@@ -2,12 +2,12 @@
 	{
 		"href": "https://github.com/simonhudson",
 		"icon": "github",
-		"CTAText": "View my Github profile"
+		"CTAText": "Github profile"
 	},
 	{
 		"href": "https://stackoverflow.com/story/simonhudson",
 		"icon": "stack-overflow",
-		"CTAText": "View my Stack Overflow Developer Story"
+		"CTAText": "Stack Overflow"
 	},
 	{
 		"href": "./Simon_Hudson_CV.pdf",

@@ -3,7 +3,7 @@
 	@include width-full();
 	margin: 0 auto;
 
-	@include media(tablet-l) {
+	@include media(desktop) {
 		@include width-two-thirds();
 	}
 }

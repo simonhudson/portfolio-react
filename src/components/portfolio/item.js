@@ -13,13 +13,13 @@ class Item extends Component {
     }
     
     generateCopyMarkup = () => {
+        if (!this.getItemLevel()) return null;
         let paragraphs = [];
         this.props.text.map((item, index) => paragraphs.push(`<p>${item}</p>`));
         return paragraphs.join(' ');
     }
 
     renderMadeWith = () => {
-        if (!this.props.madeWith) return null;
         return (
             <ul className="item__made-with">				
                 {this.props.madeWith.map((item, index) => <li key={index}>{item}</li>)}
@@ -31,7 +31,7 @@ class Item extends Component {
         if (!this.props.github) return null;
         return (
             <a className="btn--primary--hollow item__link" href={`http://www.github.com/simonhudson/${this.props.github}`} rel="noopener noreferrer" target="_blank">
-                View <span className="visuallyhidden">{this.props.title}</span> on Github
+                View <span className="visually-hidden">{this.props.title}</span> on Github
             </a>
         );
     };
@@ -72,7 +72,7 @@ class Item extends Component {
 						</div>
 						<div className="item__links">
 							<a className="btn--primary item__link" href={props.url} rel="noopener noreferrer" target="_blank">
-								View <span className="visuallyhidden">{props.title}</span>project
+								View <span className="visually-hidden">{props.title}</span>project
 							</a>
                             {this.renderGitHub()}
 						</div>

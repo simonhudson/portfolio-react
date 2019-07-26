@@ -7,9 +7,9 @@ import links from './links.json';
 const ExternalLinks = props => {
 
 	return (
-		<div className="external-links">
+		<ul className="external-links">
 			{links.map((item, index) => <LinkItem key={`item--${index}`} {...item} />)}
-		</div>
+		</ul>
 	);
 
 };

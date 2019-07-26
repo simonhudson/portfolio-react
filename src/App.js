@@ -20,12 +20,12 @@ class App extends Component {
 
     render() {
         return (
-            <div className="wrap">
+            <>
                 <SiteHeader />
                 <Banner />
                 <Portfolio />
                 <SiteFooter />
-            </div>
+            </>
         );
     }
 }

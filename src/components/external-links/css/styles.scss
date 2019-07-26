@@ -23,7 +23,11 @@
 }
 
 .external-links__item:not(:last-of-type) {
-	@include margin-b();
+	
+	@include media(tablet-p) {
+		@include margin-b();
+	}
+	
 }
 
 .external-links__link {

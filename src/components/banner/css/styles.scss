@@ -1,14 +1,29 @@
 @import 'assets/css/styles';
 
+.banner__outer {
+	@include margin-b();
+	@include padding-y-lg();
+	@include width-full();
+	background: #f9f9f9;
+	
+	@include media(tablet-p) {
+	    @include padding-y-lg();
+	}
+	
+	@include media(tablet-l) {
+	    @include padding-y-xlg();
+	}
+	
+}
+
 .banner {
-	@include border-b();
-	@include padding-y();
 	display: flex;
 	flex-direction: column;
 	
 	@include media(tablet-p) {
-		@include padding-y-lg();
+		align-items: center;
 		flex-direction: row;
+		justify-content: space-between;
 	}
 	
 }
@@ -41,7 +56,7 @@
 }
 
 .banner__title {
-	@include h5();
+	@include h6();
 	@include no-margin();
 	opacity: 0.75;
 	

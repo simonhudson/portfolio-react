@@ -42,5 +42,5 @@
 }
 @mixin h6() {
 	@include headings();
-	font-size: rem($base-font-size * 1);
+	font-size: rem($base-font-size * 1.1);
 }

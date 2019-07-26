@@ -17,3 +17,7 @@ main {
 .wrap--narrow {
 	@include wrap-narrow();
 }
+
+.band {
+	@include band();
+}

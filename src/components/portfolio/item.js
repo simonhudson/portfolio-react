@@ -13,7 +13,6 @@ class Item extends Component {
     }
     
     generateCopyMarkup = () => {
-        if (!this.getItemLevel()) return null;
         let paragraphs = [];
         this.props.text.map((item, index) => paragraphs.push(`<p>${item}</p>`));
         return paragraphs.join(' ');

@@ -29,9 +29,11 @@
 	@include media(tablet-p) {
 		@include padding();
 		@include text-left();
+	}
+	@include media(tablet-l) {
 		width: calc(100% / 3 * 2);
 	}
-
+	
 }
 
 .banner__secondary {
@@ -50,10 +52,12 @@
 	
 	@include media(tablet-p) {
 		@include h3();
+		@include no-margin();
 	}
 	
 	@include media(tablet-l) {
 	    @include h2();
+		@include no-margin();
 	}
 	
 }

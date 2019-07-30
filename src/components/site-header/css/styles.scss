@@ -4,40 +4,31 @@
 	@include padding-y();
 	@include transition();
 	@include width-full();
+	align-items: center;
 	background: palette(primary, white);
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	
-	@include media(tablet-p) {
-		align-items: center;
-		justify-content: left;
-	}
-	
 }
 
 .site-header__strap {
 	@include no-margin();
-	@include text-center();
 	@include uppercase();
 	color: rgba(palette(primary, bodyText), .65);
-	letter-spacing: rem($base-font-size * 0.05);
 	line-height: rem($base-font-size * 1.4);
 	
-	@include media(tablet-p) {
-	    @include text-left();
+	span:first-of-type {
+		@include visually-hidden();
+		
+		@include media(tablet-p) {
+		    @include visually-shown();
+		}
+		
 	}
 	
 	span:nth-of-type(2) {
 		@include strong();
 		color: palette(primary, bodyText);
-		display: block;
 		font-size: rem($base-font-size);
-		
-		@include media(tablet-p) {
-		    display: inline;
-		}
-		
 	}
 
 }

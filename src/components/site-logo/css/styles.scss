@@ -12,7 +12,6 @@
 
 .site-logo--header {
 	@include margin-r-sm();
-	@include margin-b-sm();
 	@include transition();
 
 	@include media(phone-p, 'max') {

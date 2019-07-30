@@ -12,9 +12,6 @@ const Banner = props => {
 				<div className="banner__primary">
 					<h1 className="banner__title">Hi there, my name's Simon. I am an experienced web designer/front-end developer who specialises in writing lean, standards-compliant HTML, CSS and JavaScript to create accessible and usable websites.</h1>
 				</div>
-				<div className="banner__secondary">
-					
-				</div>
 			</div>
 		</div>
 	);

@@ -32,14 +32,14 @@
 	
 }
 
-@mixin divider() {
+@mixin divider($width: 1px) {
 	
 	&:after {
 		@include margin-t();
 		@include margin-b();
 		content: '';
 		display: block;
-		border-bottom: 1px solid palette(primary, b);
+		border-bottom: $width solid palette(primary, b);
 		width: 10%;
 	}
 	

@@ -5,11 +5,24 @@
 	flex-wrap: wrap;
 }
 
+.portfolio__wrap {
+	@include padding-x();
+	
+	@include media(tablet-p) {
+	    @include no-padding();
+	}
+	
+}
+
 .item {
 	@include padding-b();
 	@include width-full();
 
 	@include media(tablet-p) {
+		@include width-half();
+	}
+
+	@include media(tablet-l) {
 		@include width-third();
 	}
 	
@@ -50,6 +63,14 @@
 	
 	@include media(tablet-l) {
 		@include width-half();
+	}
+	
+}
+
+.item__wrap {
+	
+	@include media(tablet-p) {
+	    @include padding-x();
 	}
 	
 }

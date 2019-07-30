@@ -42,7 +42,7 @@
 }
 
 .banner__title {
-	@include divider();
+	@include divider(5px);
 	@include h6();
 	@include no-margin();
 	opacity: 0.75;

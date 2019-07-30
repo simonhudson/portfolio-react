@@ -66,15 +66,7 @@
 }
 
 .item__info {
-	
-	&:after {
-		@include margin-b();
-		content: '';
-		display: block;
-		border-bottom: 1px solid palette(primary, b);
-		width: 10%;
-	}
-	
+	@include divider();
 }
 
 .item__title {
@@ -95,7 +87,6 @@
 
 .item__made-with {
 	@include no-margin();
-	@include padding-b();
 	list-style: none;
 	
 	li {

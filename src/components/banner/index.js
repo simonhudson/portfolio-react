@@ -10,7 +10,7 @@ const Banner = props => {
 		<div className="band banner__outer">
 			<div className="banner wrap">
 				<div className="banner__primary">
-					<h1 className="banner__title">Hi there, my name's Simon. I am an experienced web designer/front-end developer who specialises in writing lean, standards-compliant HTML, CSS and JavaScript to create accessible and usable websites.</h1>
+					<h1 className="banner__title"><span>Hi there, my name's Simon.&nbsp;</span>I am an experienced web designer/front-end developer who specialises in writing lean, standards-compliant HTML, CSS and JavaScript to create accessible and usable websites.</h1>
 				</div>
 			</div>
 		</div>

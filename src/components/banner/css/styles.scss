@@ -22,14 +22,10 @@
 }
 
 .banner__primary {
-	@include text-center();
+	@include padding();
 	background: url('../../../assets/imgs/double-quotations.svg') 0 0 no-repeat;
 	background-size: 100px auto;
 	
-	@include media(tablet-p) {
-		@include padding();
-		@include text-left();
-	}
 	@include media(tablet-l) {
 		width: calc(100% / 3 * 2);
 	}
@@ -46,18 +42,27 @@
 }
 
 .banner__title {
+	@include divider();
 	@include h6();
 	@include no-margin();
 	opacity: 0.75;
 	
 	@include media(tablet-p) {
-		@include h3();
+		@include h4();
 		@include no-margin();
 	}
 	
-	@include media(tablet-l) {
-	    @include h2();
-		@include no-margin();
+	span:first-of-type {
+		@include h3();
+		@include margin-b();
+		display: block;
+		font-weight: 700;
+		
+		@include media(tablet-p) {
+		    @include h1();
+			font-weight: 700;
+		}
+		
 	}
 	
 }
